@@ -7,30 +7,53 @@ import {
   ColorModeProvider,
 } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
-import { Nav } from "../components/Nav";
+import "@fontsource/m-plus-rounded-1c";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
   useSystemColorMode: false,
 };
+const RoundedFont = "M PLUS Rounded 1c";
 
 const theme = extendTheme({
   config,
   colors: {
     gruvBg: {
-      100: "#fbf1c7",
+      50: "#fffdf2",
+      100: "#f9f5d7",
+      200: "#fbf1c7",
+      300: "#d5c4a1",
+      500: "#665c54",
+      600: "#504945",
+      700: "#3c3836",
       800: "#282828",
+      900: "#1d2021",
     },
-    gruvFg: { 800: "#ebdbb2", 100: "#3c3836" },
+    gruvFg: {
+      800: "#ebdbb2",
+      100: "#3c3836",
+    },
     gruvGray: { 800: "#928374", 100: "#928374" },
+    gruvPurple: {
+      500: "#f2a3b9",
+      600: "#d3869b",
+      700: "#b16286",
+      800: "#8f3f71",
+    },
+    gruvWhite: {
+      100: "#fbf1c7",
+    },
   },
   styles: {
     global: (props: any) => ({
       body: {
         bg: mode("gruvBg.100", "gruvBg.800")(props),
-        color: mode("gruvFg.100", "gruvFg.800")(props),
+        color: mode("gruvFg.100", "rgba(255, 255, 255, 0.92)")(props),
       },
     }),
+  },
+  fonts: {
+    body: "Inter",
   },
 });
 
@@ -38,7 +61,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
-      {/* <Nav></Nav> */}
     </ChakraProvider>
   );
 }
