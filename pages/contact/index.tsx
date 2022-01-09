@@ -38,7 +38,7 @@ const Contact = () => {
         </Heading>
         <Box>
           <Text mb={4}>Do not hesitate to contact me via:</Text>
-          <Flex flexDir="column">
+          <Flex flexDir="column" gap={2}>
             <SnsLink
               href="https://www.facebook.com/auhtor.hin/"
               username="auhtor.hin"
