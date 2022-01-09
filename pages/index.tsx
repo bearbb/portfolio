@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { Article } from "components/article";
 
 import {
   Heading,
@@ -71,12 +72,7 @@ const SectionHeader = ({
 
 const Home: NextPage = () => {
   return (
-    <Layout>
-      <Head>
-        <meta name="viewport" content="width=device-width initial-scale=1" />
-        <title>Hieu Nguyen - Homepage</title>
-      </Head>
-      {/* contain an image and greet box         */}
+    <Layout title="Hieu Nguyen - Homepage">
       <Container maxW="container.sm" pl={10} pr={10}>
         <Flex w="100%" justifyContent="center" flexDir="column">
           <Box

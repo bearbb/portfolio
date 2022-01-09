@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { CopyIcon } from "@chakra-ui/icons";
 import { css } from "@emotion/react";
+import Head from "next/head";
 
 import {
   faGithub,
@@ -30,7 +31,7 @@ const InsIcon = faInstagram as IconProp;
 const Contact = () => {
   const toast = useToast();
   return (
-    <Layout>
+    <Layout title="Hieu Nguyen - Contact">
       <Container maxW="container.sm" pl={10} pr={10}>
         <Heading size="md" mb={4}>
           Contact

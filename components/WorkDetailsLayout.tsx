@@ -30,10 +30,7 @@ export const WorkDetailsLayout = ({
   children,
 }: WorkDetailsLayoutProps) => {
   return (
-    <Layout>
-      <Head>
-        <title>{`${pjName} - Hieu Nguyen`}</title>
-      </Head>
+    <Layout title={`${pjName} - Hieu Nguyen`}>
       <Container maxW="container.sm" pl={10} pr={10}>
         <Flex alignItems="center" gap={1} mb={4}>
           <NextLink href="/works">

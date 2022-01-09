@@ -6,6 +6,9 @@ import { Heading, Container, Flex } from "@chakra-ui/react";
 import { WorkByThumb } from "components/WorkByThumb";
 
 import { css } from "@emotion/react";
+import Head from "next/head";
+
+import { Article } from "components/article";
 
 const AutoTransformContainer = ({
   children,
@@ -38,7 +41,7 @@ const AutoTransformContainer = ({
 
 export const Works = () => {
   return (
-    <Layout>
+    <Layout title="Works - Hieu Nguyen">
       <Container maxW="container.sm" pl={10} pr={10}>
         <Heading size="md" mb={4}>
           Works

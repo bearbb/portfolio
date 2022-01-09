@@ -8,6 +8,9 @@ import {
 } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 import "@fontsource/m-plus-rounded-1c";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { Layout } from "@/components/Layout";
+import { Nav } from "@/components/Nav";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -57,10 +60,17 @@ const theme = extendTheme({
   },
 });
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      <Nav />
+      {/* <Layout router={router} title={router.pathname}> */}
+      <AnimatePresence exitBeforeEnter initial={true}>
+        {/* <AnimateSharedLayout> */}
+        <Component {...pageProps} />
+        {/* </AnimateSharedLayout> */}
+      </AnimatePresence>
+      {/* </Layout> */}
     </ChakraProvider>
   );
 }

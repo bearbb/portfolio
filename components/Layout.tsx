@@ -8,9 +8,15 @@ const CopyRIcon = faCopyright as IconProp;
 
 import { Nav } from "components/Nav";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { Article } from "components/article";
+// import styled from '@emotion/styled';
+import { css } from "@emotion/react";
+// import {RouterEvent} from 'next/router';
 
 interface LayoutProps {
   children: React.ReactChild | React.ReactChild[];
+  title: string;
+  // router: any;
 }
 
 const Footer = () => {
@@ -24,15 +30,26 @@ const Footer = () => {
   );
 };
 
-export const Layout = ({ children }: LayoutProps) => {
+export const Layout = ({ children, title }: LayoutProps) => {
   return (
-    <Box pt={14} minW="360px" pb={7}>
-      <Nav />
-      <Center mt={7} zIndex={-1000} mb={7}>
-        <Img w="30%" src="/images/pizza-edited.png" alt="pixel art pizza"></Img>
-      </Center>
-      {children}
-      <Footer />
-    </Box>
+    <Article title={title}>
+      <Box pt={28} minW="360px" pb={7}>
+        {/* <Nav /> */}
+        <Center mt={7} zIndex={-1000} mb={7}>
+          <Img
+            w="20%"
+            src="/images/pizza-edited.png"
+            alt="pixel art pizza"
+            css={css`
+              @media (max-width: 750px) {
+                width: 50%;
+              }
+            `}
+          ></Img>
+        </Center>
+        {children}
+        <Footer />
+      </Box>
+    </Article>
   );
 };
