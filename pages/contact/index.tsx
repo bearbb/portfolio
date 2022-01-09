@@ -37,11 +37,8 @@ const Contact = () => {
           Contact
         </Heading>
         <Box>
-          <Text mb={4}>Dont hesitate to contact me via:</Text>
+          <Text mb={4}>Do not hesitate to contact me via:</Text>
           <Flex flexDir="column">
-            <SnsLink href="" username="0964680696">
-              <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
-            </SnsLink>
             <SnsLink
               href="https://www.facebook.com/auhtor.hin/"
               username="auhtor.hin"
@@ -54,6 +51,38 @@ const Contact = () => {
             >
               <FontAwesomeIcon icon={InsIcon}></FontAwesomeIcon>
             </SnsLink>
+            {/* <SnsLink href="" username="0964680696">
+              <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
+            </SnsLink> */}
+            <Button
+              w="fit-content"
+              alignItems="center"
+              gap={3}
+              pr={4}
+              pl={4}
+              fontWeight="semibold"
+              color={useColorModeValue("gruvPurple.800", "gruvPurple.500")}
+              bg={useColorModeValue("gruvBg.100", "gruvBg.800")}
+              _hover={{
+                bg: useColorModeValue(
+                  "rgba(143, 63, 113, 0.2)",
+                  "rgba(242, 51, 185, 0.2)"
+                ),
+              }}
+              rounded={5}
+              onClick={() => {
+                navigator.clipboard.writeText("0964680696");
+                toast({
+                  status: "success",
+                  description: "Phone number copied",
+                  duration: 3000,
+                });
+              }}
+            >
+              <FontAwesomeIcon icon={faPhone} />
+              <Text>0964680696</Text>
+              <CopyIcon></CopyIcon>
+            </Button>
             <Button
               w="fit-content"
               alignItems="center"

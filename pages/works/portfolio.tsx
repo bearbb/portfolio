@@ -35,7 +35,7 @@ const Portfolio = () => {
         </NextLink>
       </BadgeNDetails>
       <BadgeNDetails badge="stack">
-        <Text>React, NextJS, Chakra UI, Emotion</Text>
+        <Text>TypeScript, React, NextJS, Chakra UI, Emotion</Text>
       </BadgeNDetails>
       <Flex pt={4} pl={1} pr={1} gap={6} flexDir="column">
         <CustomImg src="/images/portfolio.png" />

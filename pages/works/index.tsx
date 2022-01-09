@@ -51,13 +51,13 @@ export const Works = () => {
             path="bisous"
             thumbInPath="/images/bisous.png"
             pjName="Bisous"
-            detail="A social network website, with some basic function like: sharing images, interacting with post, messages."
+            detail="A social network website where users can share their images and status, Interact with others"
           ></WorkByThumb>
           <WorkByThumb
             path="monopoly"
             thumbInPath="/images/monopoly.png"
             pjName="Monopoly game"
-            detail="Multiplayer monopoly web game"
+            detail="An online web game simulating boardgame for multiplayer"
           ></WorkByThumb>
         </AutoTransformContainer>
         <AutoTransformContainer>

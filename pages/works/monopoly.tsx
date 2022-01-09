@@ -36,7 +36,7 @@ const Monopoly = () => {
       </BadgeNDetails>
       <BadgeNDetails badge="stack">
         <Text>
-          React, Chakra UI,{" "}
+          TypeScript, React, Chakra UI,{" "}
           <CustomLink href="https://boardgame.io">boardgame.io</CustomLink>
         </Text>
       </BadgeNDetails>

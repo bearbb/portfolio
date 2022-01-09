@@ -54,7 +54,7 @@ const Bisous = () => {
         </NextLink>
       </BadgeNDetails>
       <BadgeNDetails badge="stack">
-        <Text>React, NodeJS, MongoDB</Text>
+        <Text>TypeScript, React, NodeJS, MongoDB</Text>
       </BadgeNDetails>
       <Flex id="ImageContainer" pt={4} pl={1} pr={1} gap={6} flexDir="column">
         <CustomImg src="/images/bisous.png" />
