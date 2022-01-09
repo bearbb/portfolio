@@ -28,6 +28,7 @@ export const Article = ({
           <title>{title} - Takuya Matsuyama</title>
           <meta name="twitter:title" content={title} />
           <meta property="og:title" content={title} />
+          <link rel="icon" href="/images/feather.png" />
         </Head>
       )}
       {children}

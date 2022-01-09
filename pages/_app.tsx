@@ -16,7 +16,6 @@ const config: ThemeConfig = {
   initialColorMode: "dark",
   useSystemColorMode: false,
 };
-const RoundedFont = "M PLUS Rounded 1c";
 
 const theme = extendTheme({
   config,
