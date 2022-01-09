@@ -11,6 +11,7 @@ import "@fontsource/m-plus-rounded-1c";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { Layout } from "@/components/Layout";
 import { Nav } from "@/components/Nav";
+import Head from "next/head";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -62,6 +63,9 @@ const theme = extendTheme({
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
+      <Head>
+        {/* <link rel="shortcut icon" href="/images/feather.ico" /> */}
+      </Head>
       <Nav />
       {/* <Layout router={router} title={router.pathname}> */}
       <AnimatePresence exitBeforeEnter initial={true}>

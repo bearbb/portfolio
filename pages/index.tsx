@@ -124,8 +124,6 @@ const Home: NextPage = () => {
               specifically enthusiastic about Web development, both on front-end
               and back-end. Besides, I am willing to learn more about UI/UX to
               create more wonderful websites.
-              {/* When not working, I loves playing
-              basketball or take some film photo. */}
             </Text>
             <Link href="/works">
               <a>

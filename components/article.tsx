@@ -25,10 +25,9 @@ export const Article = ({
     >
       {title && (
         <Head>
-          <title>{title} - Takuya Matsuyama</title>
-          <meta name="twitter:title" content={title} />
-          <meta property="og:title" content={title} />
-          <link rel="icon" href="/images/feather.png" />
+          <title>{title} - Hieu Nguyen</title>
+          {/* <meta name="twitter:title" content={title} />
+          <meta property="og:title" content={title} /> */}
         </Head>
       )}
       {children}
