@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "@fontsource/m-plus-rounded-1c";
 
@@ -225,10 +225,30 @@ const LinkStyle = styled.span<LinkStyleProps>`
 `;
 
 const Menu = ({ colorMode }: { colorMode: ColorMode }) => {
-  const MenuButton = (props: BoxProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const open = () => {
+    setIsOpen(true);
+  };
+  const close = () => {
+    setIsOpen(false);
+  };
+  const toggleIsOpen = () => {
+    setIsOpen(!isOpen);
+  };
+  const MenuButton = ({
+    buttonName,
+  }: // children,
+  {
+    // props: BoxProps;
+    buttonName: string;
+    // children: React.ReactChild;
+  }) => {
     return (
       <Box
-        {...props}
+        // {...props}
+        onClick={() => {
+          toggleIsOpen();
+        }}
         cursor="pointer"
         rounded={0}
         w="220px"
@@ -241,11 +261,14 @@ const Menu = ({ colorMode }: { colorMode: ColorMode }) => {
         fontWeight="normal"
         textAlign="left"
         p={2}
-      ></Box>
+      >
+        {/* {children} */}
+        {buttonName}
+      </Box>
     );
   };
   return (
-    <Popover>
+    <Popover isOpen={isOpen}>
       <PopoverTrigger>
         <Button
           {...ButtonStyle}
@@ -261,21 +284,28 @@ const Menu = ({ colorMode }: { colorMode: ColorMode }) => {
             }
             display: none;
           `}
+          onClick={toggleIsOpen}
         >
           <HamburgerIcon {...IconStyle}></HamburgerIcon>
         </Button>
       </PopoverTrigger>
       <PopoverContent w="unset" mr={3} _focus={{ border: "none" }}>
         <Flex flexDir="column">
-          <MenuButton>
-            <Link href="/works">Works</Link>
-          </MenuButton>
-          <MenuButton>
-            <Link href="/contact">Contact</Link>
-          </MenuButton>
-          <MenuButton>
-            <Link href="https://github.com/bearbb/portfolio">View source</Link>
-          </MenuButton>
+          <Link href="/works">
+            <a>
+              <MenuButton buttonName="Works"></MenuButton>
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a>
+              <MenuButton buttonName="Contact" />
+            </a>
+          </Link>
+          <Link href="https://github.com/bearbb/portfolio">
+            <a>
+              <MenuButton buttonName="View source" />
+            </a>
+          </Link>
         </Flex>
       </PopoverContent>
     </Popover>

@@ -37,7 +37,7 @@ export const Layout = ({ children, title }: LayoutProps) => {
         {/* <Nav /> */}
         <Center mt={7} zIndex={-1000} mb={7}>
           <Img
-            w="20%"
+            w="17%"
             src="/images/pizza-edited.png"
             alt="pixel art pizza"
             css={css`
