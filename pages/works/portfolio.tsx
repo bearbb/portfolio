@@ -30,8 +30,8 @@ const Portfolio = () => {
         <CustomLink href="https://www.craftz.dog/">craftz.dog</CustomLink>)
       </Text>
       <BadgeNDetails badge="website">
-        <NextLink href="">
-          <CustomLink>https://portfolio.link</CustomLink>
+        <NextLink href="https://portfolio.swanoogie.me">
+          <CustomLink>https://portfolio.swanoogie.me</CustomLink>
         </NextLink>
       </BadgeNDetails>
       <BadgeNDetails badge="stack">

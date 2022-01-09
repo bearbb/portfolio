@@ -44,9 +44,9 @@ const Bisous = () => {
           text-indent: 1em;
         `}
       >
-        A social network website where user can share their images, status.
-        Interacting with others as well. Using token to authenticate and
-        encrypted password.
+        A social network website where users can share their images and status,
+        Interact with others, use token to authenticate and encrypted password
+        as well.
       </Text>
       <BadgeNDetails badge="Website">
         <NextLink href="https://swanoogie.me">

@@ -87,7 +87,7 @@ const Home: NextPage = () => {
             mt={9}
           >
             <Text textAlign="center">
-              Hello, Im a student studying at University of Information
+              Hello, I am a senior student at University of Information
               Technology
             </Text>
           </Box>
@@ -98,12 +98,13 @@ const Home: NextPage = () => {
               <Heading as="h1" size="xl" fontWeight="700" letterSpacing="wide">
                 Hieu Nguyen
               </Heading>
-              <Text>Last year student at UIT</Text>
+              {/* <Text>Last year student at UIT</Text> */}
             </Flex>
             <Flex justifyContent="center">
               <Avatar
                 zIndex={1}
-                src="/images/sloth-color.png"
+                // src="/images/sloth-color.png"
+                src="/images/author.jpg"
                 size="xl"
                 borderWidth="2px"
                 borderColor="white"
@@ -119,11 +120,12 @@ const Home: NextPage = () => {
                 text-indent: 1em;
               `}
             >
-              Nguyen Minh Hieu is a last year student at UIT with passion for
-              creating digital services. Enthusiast in Web development, both on
-              front-end and back-end. Wanna learning more about UI/UX and
-              creating more wonderful websites. When not working, he loves
-              playing basketball or take some film photo.
+              I have considerable passion for creating digital services,
+              specifically enthusiastic in Web development, both on front-end
+              and back-end. Beside I am willing to learn more about UI/UX to
+              create more wonderful websites.
+              {/* When not working, I loves playing
+              basketball or take some film photo. */}
             </Text>
             <Link href="/works">
               <a>
@@ -140,7 +142,7 @@ const Home: NextPage = () => {
             </Link>
           </Section>
           <Section>
-            <SectionHeader section="Bio"></SectionHeader>
+            <SectionHeader section="Education"></SectionHeader>
             <Bios></Bios>
           </Section>
           <Section>
@@ -148,8 +150,8 @@ const Home: NextPage = () => {
               <HeartIcon></HeartIcon>
             </SectionHeader>
             <Text alignSelf="flex-start">
-              Basketball <BasketballIcon />, Music, Film photography, Art,
-              Games, Movies
+              Basketball <BasketballIcon />, Music, Film Photography, Arts,
+              Video Games and Movies.
             </Text>
           </Section>
           <Section>

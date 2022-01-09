@@ -25,7 +25,7 @@ const Monopoly = () => {
           text-indent: 1em;
         `}
       >
-        Multiplayer monopoly web game.
+        An online web game simulating boardgame for multiplayer
       </Text>
       <BadgeNDetails badge="website">
         <NextLink href="https://monopoly-swanoogie-game.herokuapp.com/">

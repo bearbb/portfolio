@@ -103,7 +103,7 @@ export const SnsLink = ({ href, children, username, props }: SnsLinkProps) => {
           rounded={5}
         >
           {children}
-          <Text>@{username}</Text>
+          <Text>{username}</Text>
         </Button>
       </a>
     </Link>

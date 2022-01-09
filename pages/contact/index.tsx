@@ -20,7 +20,7 @@ import {
   faInstagram,
   faFacebook,
 } from "@fortawesome/fontawesome-free-brands";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
@@ -37,8 +37,11 @@ const Contact = () => {
           Contact
         </Heading>
         <Box>
-          <Text mb={4}>You can contact me via: </Text>
+          <Text mb={4}>Dont hesitate to contact me via:</Text>
           <Flex flexDir="column">
+            <SnsLink href="" username="0964680696">
+              <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
+            </SnsLink>
             <SnsLink
               href="https://www.facebook.com/auhtor.hin/"
               username="auhtor.hin"
