@@ -115,12 +115,19 @@ const Home: NextPage = () => {
             </Flex>
           </Flex>
           <Section>
-            <SectionHeader section="Work"></SectionHeader>
-            <Text mb={4} textAlign="justify">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
-              ducimus iusto beatae repellat, voluptas nihil consectetur debitis
-              voluptate minima autem quas tempora dolore quisquam tenetur facere
-              culpa corrupti quo aut.
+            <SectionHeader section="About me"></SectionHeader>
+            <Text
+              mb={4}
+              textAlign="justify"
+              css={css`
+                text-indent: 1em;
+              `}
+            >
+              Nguyen Minh Hieu is a last year student at UIT with passion for
+              creating digital services. Enthusiast in Web development, both on
+              front-end and back-end. Wanna learning more about UI/UX and
+              creating more wonderful websites. When not working, he loves
+              playing basketball or take some film photo.
             </Text>
             <Link href="/works">
               <a>

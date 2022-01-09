@@ -17,13 +17,16 @@ const AutoTransformContainer = ({
       id="container"
       flexWrap="wrap"
       justifyContent="space-between"
+      mb={8}
       gap={5}
       css={css`
-        @media (max-width: 500px) {
+        @media (max-width: 750px) {
           display: block;
           .ThumbContainer {
             width: 100%;
-            margin-bottom: 15px;
+          }
+          #ThumbImgContainer {
+            width: 100%;
           }
         }
       `}
@@ -42,26 +45,30 @@ export const Works = () => {
         </Heading>
         <AutoTransformContainer>
           <WorkByThumb
+            path="bisous"
             thumbInPath="/images/bisous.png"
             pjName="Bisous"
-            detail="ss"
+            detail="A social network website, with some basic function like: sharing images, interacting with post, messages."
           ></WorkByThumb>
           <WorkByThumb
-            thumbInPath="/images/bisous.png"
-            pjName="Bisous"
-            detail="ss"
+            path="monopoly"
+            thumbInPath="/images/monopoly.png"
+            pjName="Monopoly game"
+            detail="Multiplayer monopoly web game"
           ></WorkByThumb>
         </AutoTransformContainer>
         <AutoTransformContainer>
           <WorkByThumb
-            thumbInPath="/images/bisous.png"
-            pjName="Bisous"
-            detail="ss"
+            path="portfolio"
+            thumbInPath="/images/portfolio.png"
+            pjName="Portfolio"
+            detail="Personal portfolio - inspired by Takuya Matsuyama (craftz.dog)"
           ></WorkByThumb>
           <WorkByThumb
-            thumbInPath="/images/bisous.png"
-            pjName="Bisous"
-            detail="ss"
+            path=""
+            thumbInPath="/images/coming-soon.jpg"
+            pjName="Upcoming"
+            detail="Still in idea creating"
           ></WorkByThumb>
         </AutoTransformContainer>
       </Container>

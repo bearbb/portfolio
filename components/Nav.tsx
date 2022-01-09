@@ -213,6 +213,7 @@ const LinkStyle = styled.span<LinkStyleProps>`
   &:hover {
     text-decoration: underline;
   }
+  cursor: pointer;
   height: 100%;
   display: flex;
   justify-content: center;

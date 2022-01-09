@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Center, Box, Flex, Text } from "@chakra-ui/react";
+import { Center, Box, Flex, Text, Img } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { css } from "@emotion/react";
 
@@ -9,33 +10,37 @@ interface WorkByThumbProps {
   thumbInPath: string;
   pjName: string;
   detail: string;
+  path: string;
 }
 
 export const WorkByThumb = ({
   thumbInPath,
   pjName,
   detail,
+  path,
 }: WorkByThumbProps) => {
   const ThumbImage = () => (
-    <Image width="500px" height="280px" src={thumbInPath} alt="bisous"></Image>
+    <Img src={thumbInPath} alt={pjName} rounded={8}></Img>
   );
   return (
-    <Center flexDir="column" className="ThumbContainer" flex="1" w="45%">
-      <Box
-        id="ThumbImgContainer"
-        rounded={8}
-        css={css`
-          img {
-            border-radius: 14px;
-          }
-        `}
+    <Link href={`/works/${path}`} passHref={true}>
+      <Flex
+        flexDir="column"
+        className="ThumbContainer"
+        flex="1 1 0"
+        w="45%"
+        alignItems="center"
+        cursor="pointer"
+        mb={8}
       >
-        <ThumbImage></ThumbImage>
-      </Box>
-      <Text as="h3" fontWeight="semibold" fontSize="xl">
-        {pjName}
-      </Text>
-      <Text>{detail}</Text>
-    </Center>
+        <Box id="ThumbImgContainer" mb={4}>
+          <ThumbImage></ThumbImage>
+        </Box>
+        <Text as="h3" fontWeight="semibold" fontSize="xl">
+          {pjName}
+        </Text>
+        <Text textAlign="center">{detail}</Text>
+      </Flex>
+    </Link>
   );
 };

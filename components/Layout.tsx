@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  Center,
-  Flex,
-  Container,
-  Box,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Center, Box, Text, Img } from "@chakra-ui/react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/fontawesome-free-regular";
@@ -35,13 +28,8 @@ export const Layout = ({ children }: LayoutProps) => {
   return (
     <Box pt={14} minW="360px" pb={7}>
       <Nav />
-      <Center mt={9} zIndex={-1000} mb={9}>
-        <Image
-          width="250px"
-          height="200px"
-          src="/images/pizza-edited.png"
-          alt="tower"
-        ></Image>
+      <Center mt={7} zIndex={-1000} mb={7}>
+        <Img w="30%" src="/images/pizza-edited.png" alt="pixel art pizza"></Img>
       </Center>
       {children}
       <Footer />
