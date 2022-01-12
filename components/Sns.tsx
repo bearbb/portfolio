@@ -58,7 +58,7 @@ export const Sns = () => {
         }}
         rounded={5}
         onClick={() => {
-          navigator.clipboard.writeText("swanoogie@gmail.com");
+          navigator.clipboard.writeText("hieunguynx@gmail.com");
           toast({
             status: "success",
             description: "Email copied",
@@ -67,7 +67,7 @@ export const Sns = () => {
         }}
       >
         <FontAwesomeIcon icon={faEnvelope} />
-        <Text>swanoogie@gmail.com</Text>
+        <Text>hieunguynx@gmail.com</Text>
         <CopyIcon></CopyIcon>
       </Button>
     </Box>
